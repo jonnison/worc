@@ -32,7 +32,7 @@ class Candidate(BaseModel):
     class Meta:
         verbose_name = _('Candidate')
         verbose_name_plural = _('Candidates')
-
+        ordering = ['-created_at']
 
 class Contact(BaseModel):
     TYPE_CHOICES = (
@@ -49,3 +49,4 @@ class Contact(BaseModel):
     class Meta:
         verbose_name = _('Contact')
         verbose_name_plural = _('Contacts')
+        ordering = ['-created_at']
