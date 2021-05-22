@@ -40,7 +40,7 @@ class Contact(BaseModel):
         ("pessoal", "Pessoal"),
     )
     type = models.CharField(_("Contact Type"),max_length=12, choices=TYPE_CHOICES)
-    number = models.CharField(_("Contact Type"),max_length=12)
+    number = models.CharField(_("Contact Number"),max_length=12)
     candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
 
     def __str__(self):
